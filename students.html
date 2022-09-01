@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/forms.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/students.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- iconscount cdn -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="icon" type="image/x-icon" href="images/logo.png">
+    
+    <title>Jerusalem | Students</title>
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+    <style>
+        .courses{
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container nav_container">
+            <a href="index.html"><h4>Jerusalem</h4></a>
+            <ul class="nav_menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="students.html">Students</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button id="open-menu-btn"> <i class="uil uil-bars"></i> </button>
+            <button id="close-menu-btn"> <i class="uil uil-times"></i></button>
+        </div>
+    </nav>
+    
+    <header>
+        <div class="container header_container">
+            <div class="header_left">
+                <h1>Students</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, doloribus a dolorem harum repellat Consectetur.</p>
+            
+                <a href="courses.html" class="btn btn-primary">Explore</a>
+            </div>
+            <div class="header_right">
+                <div class="header_right-image">
+                    <img src="images/1.svg" alt="">
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- END OF HEADER SECTIONS -->
+
+<!-- gallery section start  -->
+
+<div class="gallery-section">
+    <h2>PORTFOLIO</h2>
+
+<div id="myBtnContainer">
+  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+  <button class="btn" onclick="filterSelection('nature')"> Nature</button>
+  <button class="btn" onclick="filterSelection('cars')"> Cars</button>
+  <button class="btn" onclick="filterSelection('people')"> People</button>
+</div>
+
+<!-- Portfolio Gallery Grid -->
+        <div class="row">
+        <div class="column nature">
+            <div class="content">
+            <img src="images/j1.jpg" alt="Mountains" style="width:100%">
+            <h4>Mountains</h4>
+            <p>Lorem ipsum dolor..</p>
+            </div>
+        </div>
+        <div class="column nature">
+            <div class="content">
+            <img src="images/j1.jpg" alt="Mountains" style="width:100%">
+            <h4>Lights</h4>
+            <p>Lorem ipsum dolor..</p>
+            </div>
+        </div>
+        <div class="column nature">
+            <div class="content">
+            <img src="images/j1.jpg" alt="Mountains" style="width:100%">
+            <h4>Forest</h4>
+            <p>Lorem ipsum dolor..</p>
+            </div>
+        </div>
+        
+        <div class="column nature">
+            <div class="content">
+            <img src="images/j1.jpg" alt="Mountains" style="width:100%">
+            <h4>Retro</h4>
+            <p>Lorem ipsum dolor..</p>
+            </div>
+        </div>
+        <div class="column cars">
+            <div class="content">
+            <img src="images/j1.jpg" alt="Mountains" style="width:100%">
+            <h4>Fast</h4>
+            <p>Lorem ipsum dolor..</p>
+            </div>
+        </div>
+        <div class="column cars">
+            <div class="content">
+            <img src="images/j1.jpg" alt="Mountains" style="width:100%">
+            <h4>Classic</h4>
+            <p>Lorem ipsum dolor..</p>
+            </div>
+        </div>
+
+        <div class="column people">
+            <div class="content">
+            <img src="images/j1.jpg" alt="Mountains" style="width:100%">
+            <h4>Girl</h4>
+            <p>Lorem ipsum dolor..</p>
+            </div>
+        </div>
+        <div class="column people">
+            <div class="content">
+            <img src="images/j1.jpg" alt="Mountains" style="width:100%">
+            <h4>Man</h4>
+            <p>Lorem ipsum dolor..</p>
+            </div>
+        </div>
+        <div class="column people">
+            <div class="content">
+            <img src="images/j1.jpg" alt="Mountains" style="width:100%">
+            <h4>Woman</h4>
+            <p>Lorem ipsum dolor..</p>
+            </div>
+        </div>
+        <!-- END GRID -->
+        </div>
+        </div>
+
+<!-- ====================== END OF GalleryL ===================== -->
+
+
+</body>
+</html>
+
+<script src="main.js"></script>
+<script src="gallery.js"></script>

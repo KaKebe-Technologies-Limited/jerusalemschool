@@ -1,0 +1,772 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+:root{
+    --jcolor:#474184;
+    --color-primary: #6c63ff;
+    --color-success:#00bf83;
+    --color-warning:#f7c94b;
+    --color-danger: #f75842;
+    --color-danger-variant: rgb(247,88,66,0.4);
+    --color-white: #fff;
+    --color-black:#000;
+    /* --color-bg: #1434b4; */
+    --color-bg: #1f2641;
+    /* --color-bg1: #2e3267; */
+    --color-bg1: #2e3267;
+    --color-bg2: #424890;
+
+    --container-width-lg: 80%;
+    --container-with-md: 90%;
+    --container-width-sm: 94%;
+
+    --transition: all 400ms ease;
+}
+.header_container{
+    /* background-image: url("../images/bg.jpg");
+    background-repeat: no-repeat;
+    width: 100%; */
+}
+body{
+    font-family: "Montserrat", sans-serif;
+    line-height: 2;
+    color: var(--color-white);
+    background: var(--color-bg);
+    /* background: #f2f4f6; */
+}
+
+/* home slider section  */
+.homebg img{
+    /* height: 700px; */
+}
+.homebg h4{
+    display: block;
+    position: absolute;
+    text-align: center;
+    align-items: center;
+}
+
+
+
+
+.container{
+    width: var(--container-width-lg);
+    margin: 0 auto;
+}
+
+.section{
+    padding: 6rem 0  ;
+}
+.section h2{
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5{
+    line-height: 1.2;
+}
+
+h1{
+    font-size: 2.4rem;
+}
+h2{
+    font-size: 2rem;
+}
+h3{
+    font-size: 1.6rem;
+}
+
+h4{
+    font-size: 1.3rem;
+}
+
+a{
+    color: var(--color-white);
+}
+img{
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.btn{
+    display: inline-block ;
+    background: var(--color-white);
+    color: var(--color-white);
+    padding: 1rem 2rem;
+    border: 1px solid transparent;
+    font-weight: 500;
+    transition: var(--transition);
+}
+.btn:hover{
+    background: transparent;
+    color: var(--color-white);
+    border-color: var(--color-white);
+}
+.btn-primary{
+    background: var(--color-danger);
+    color: var(--color-white);
+}
+
+/* nav bar */
+nav{
+    background: transparent;
+    width: 100vw;
+    height: 80px;
+    position: fixed;
+    top: 0;
+    z-index: 11;
+}
+.nav_container{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+
+/* change navbar styles on scroll using js */
+
+.window-scroll{
+    background: var(--color-primary);
+    box-shadow: 0 1rem 2rem #000;
+}
+
+
+.nav_menu{
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+.nav_menu a{
+    font-size: 0.9rem;
+    transition: var(--transition);
+}
+
+.nav_menu a:hover{
+    color: var(--color-bg2);
+}
+
+/* ==================HEADER ====================== */
+header{
+    position: relative;
+    top: 5rem;
+    overflow: hidden;
+    height: 70ch;
+    margin-bottom: 5rem;
+}
+
+.header_container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 5rem;
+    height: 100%;
+}
+
+#back{
+    background-image: url(images/bg.jpg);
+}
+.header_left p{
+    margin: 1rem 0 2.4rem;
+}
+
+/* ==================   CATEGORIES ====================== */
+
+.categories{
+    /* margin-top: 20%; */
+    background: var(--color-bg1);
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+.categories h1{
+    line-height: 1;
+    margin-bottom: 3rem;
+
+
+}
+.categories_container{
+    display: grid;
+    grid-template-columns: 40% 60%;
+    /* gap: 4rem; */
+}
+.categories_left p{
+    margin: 1rem 0 3rem;
+}
+
+.categories_right{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1.2rem;
+}
+
+.category{
+    background: var(--color-bg2);
+    padding: 2rem;
+    border-radius: 2rem;
+    transition: var(--transition);
+}
+.category:hover{
+    box-shadow: 0 3rem 3rem rgb(0,0,0,0);
+} 
+.category:nth-child(2) .category_icon{
+    background: var(--color-danger);
+}
+.category:nth-child(3) .category_icon{
+    background: var(--color-success);
+}
+.category:nth-child(4) .category_icon{
+    background: var(--color-warning);
+}
+.category:nth-child(5) .category_icon{
+    background: var(--color-success);
+}
+.category_icon{
+    background: var(--color-primary);
+    padding: 0.7rem;
+    border-radius: 0.9rem;
+}
+.category h5{
+    margin: 2rem 0 1rem;
+}
+.category p{
+    font-size: 0.85rem;
+}
+
+/* ==================   REMARKS PRINCIPLE ====================== */
+.welcome_remarks{
+    background: var(--color-bg2);
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+.container-remarks{
+    display: grid;
+    grid-template-columns: 40% 60%;
+    gap: 3rem ;
+}
+.remarks_image img{
+    height: 300px;
+    width: 500px;
+    
+}
+.container_right{
+    padding: 1rem;
+    align-items: center;
+    /* text-align: center; */
+
+}
+.container_right h3{
+    margin-bottom: 1.2rem;
+}
+.container_right p{
+    padding-top: 1rem;
+}
+
+/* ==================   REMARKS PRINCIPLE  MEDIA QUERRIES TABLET ====================== */
+
+@media screen and (max-width: 1024px){
+    
+    .container-remarks{
+        width: var(--container-with-md);
+        grid-template-columns: 1fr ;
+        gap: 2rem;
+    }
+    
+}
+
+@media  screen and (max-width:1180px) {
+    .container-remarks{
+        grid-template-columns:1fr 1fr;
+        gap: 3rem;
+    }
+    .container_left img{
+        width: 500px;
+    } 
+    
+}
+
+/* ==================   REMARKS PRINCIPLE  MEDIA QUERRIES PHONES ====================== */
+
+@media screen and (max-width: 600px){
+    
+    .container-remarks{
+        width: var(--container-width-sm);
+        /* display: grid; */
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    .container_left img{
+        display: grid;
+        width: 350px;
+        height: 300px;
+    }
+
+    
+}
+
+
+/* ==================   courses ====================== */
+.courses{
+    margin-top: 10rem;
+    text-align: center;
+}
+
+
+.courses_container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    padding-top: 2rem;
+}
+.course{
+    background: var(--color-bg1);
+    text-align: center;
+    border:  1px solid transparent;
+    transition: var(--transition)
+} 
+.course:hover{
+    background: transparent;
+    border-color: var(--color-primary);
+}
+.course_info{
+    padding: 2rem;
+}
+.course_info p{
+    margin: 1.2rem 0 2rem;
+    font-size: 0.9rem;
+}
+
+/* <!-- ====================== END OF COURSES ===================== --> */
+ .faqs{
+     padding-top: 7%;
+     background: var(--color-bg);
+     box-shadow: inset 0 0 3rem #000;
+     padding-bottom: 4%;
+ }
+ .faqs_container{
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+     gap: 1rem;
+ }
+
+ .faq{
+     padding: 2rem;
+     display: flex;
+     align-items: center;
+     gap: 1.4rem;
+     height: fit-content;
+     background: var(--color-primary);
+     cursor: pointer;
+ }
+
+ .faq h4{
+     font-size: 1rem;
+     line-height: 2.2;
+ }
+ .faq_icon{
+     align-self: flex-start;
+     font-size: 1.2rem;
+ }
+ .faq p{
+     margin-top: 0.8rem;
+     display: none;
+ }
+ .faq.open p{
+     display: block;
+ }
+
+ /* <!-- ====================== END OF FAQS ===================== --> */
+
+ .testimonials_container{
+     overflow-x: hidden;
+     position: relative;
+     margin-bottom: 5rem;
+ }
+ .testimonial{
+     padding-top: 2rem;
+ }
+
+ .avatar{
+     width: 6rem;
+     height: 6rem;
+     border-radius: 50%;
+     overflow: hidden;
+     margin: 0 auto 1rem;
+     border: 1rem solid var(--color-bg1);
+ }
+
+ .testimonial_info{
+     text-align: center;
+ }
+.testimonial_body{
+    background: var(--color-primary);
+    padding: 2rem;
+    margin-top: 3rem;
+    position: relative;
+}
+
+/* box edge for the testionals */
+.testimonial_body::before{
+    content: "";
+    display: block;
+    background: linear-gradient(135deg,transparent,var(--color-primary), var(--color-primary)) ;
+    width: 3rem;
+    height: 3rem;
+    position: absolute;
+    left: 47%;
+    top: -1.5em;
+    transform: rotate(45deg);
+}
+
+/* =======================ADMISSIOINS=============================== */
+.admissions{
+    background: var(--color-bg1);
+    padding: 1rem;
+    /* margin-top: 7%; */
+    padding-top: 3rem;
+}
+.container-admission{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.container-admission div{
+    background: var(--color-bg2);
+    border-radius: 0px;
+    border:  1px solid transparent;
+    padding: 25px;
+    border-radius: 20px;
+}
+.container-admission div:hover{
+    background: transparent;
+    border-color: var(--color-primary);
+}
+.admission-guides h3{
+    font-size: 17px;
+
+}
+#adguide{
+    text-align: center;
+    padding-bottom: 50px;
+}
+.admission-guides p{
+    padding-top: 20px;
+}
+
+/* MEDIA QUERRIES FOR TABLETS */
+@media screen and (max-width:1024px) {
+    .container-admission{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+
+    }
+    
+}
+
+/* MEDIA QUERRIES FOR PHONES */
+@media screen and (max-width:600px) {
+    .container-admission{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        animation: var(--animation);
+
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ /* <!-- ====================== END OF TESTIMONIALS ===================== --> */
+ footer{
+     background: var(--color-bg1);
+     padding-top: 5rem;
+     font-size: 0.9rem;
+ }
+
+ .footer_container{
+     display: grid;
+     grid-template-columns: repeat(4,1fr);
+     gap: 5rem;
+
+ }
+ .footer_container >div h4{
+     margin-bottom: 1.2rem;
+ }
+ .footer_1{
+     margin-left: 4rem;
+ }
+ .footer_1 p{
+    margin: 0 0 2rem;
+ }
+footer ul li{
+    margin-bottom: 0.2rem;
+}
+footer ul li a:hover{
+    text-decoration: underline;
+}
+.footer_socials{
+    display: flex;
+    gap: 1.2rem;
+    margin-top: 2rem;
+
+}
+.footer_copyright{
+    text-align: center;
+    margin-top: 4rem;
+    padding: 1.2rem 0;
+    border-top:  1px solid var(--color-bg2);
+}
+
+
+ /* <!-- ====================== END OF TESTIMONIALS ===================== --> */
+
+
+  /* <!-- ====================== MEDIA QUERRIES TABLETS ===================== --> */
+  @media  screen and (max-width:1024px) {
+      .container{
+          width: var(--container-with-md);
+      }
+      h1{
+          font-size: 2.2rem;
+      }
+      h2{
+          font-size: 1.7rem;
+      }
+      h3{
+          font-size: 1.4rem;
+      }
+      h4{
+          font-size: 1.2rem;
+      }
+ /* ==============================NAV BAR ======================== */
+      nav button{
+          display: inline-block;
+          background: transparent;
+          font-size: 1.8rem;
+          color: var(--color-white);
+          cursor: [pointer];
+      }
+
+      nav button#close-menu-btn{
+          display: none;
+      }
+      .nav_menu{
+          position: fixed;
+          top: 5rem;
+          right: 5% ;
+          height: fit-content;
+          width: 18rem;
+          flex-direction: column;
+          gap: 0;
+          display: none;
+      }
+
+
+      .nav_menu li{
+          width: 100%;
+          height: 5.8rem;
+          animation: animateNavItems 400ms linear forwards;
+          transform-origin: top right;
+          opacity: 0;
+   
+      }
+
+      .nav_menu li:nth-child(2){
+         animation-delay: 200ms;
+        }
+        .nav_menu li:nth-child(3){
+            animation-delay: 400ms;
+           }
+           .nav_menu li:nth-child(4){
+            animation-delay: 600ms;
+           }
+           .nav_menu li:nth-child(5){
+            animation-delay: 800ms;
+           }
+      /* adding keyframes animations */
+
+      @keyframes animateNavItems {
+        0%{
+            transform: rotateZ(-90deg);
+        }
+        100%{
+          transform: rotateZ(0);
+          opacity: 1;
+      }
+        
+    }
+      .nav_menu li a {
+          background: var(--color-primary);
+          box-shadow: -4rem 6rem 10rem #000000;
+          width: 100%;
+          height: 100%;
+          display: grid;
+          place-items: center;
+      }
+      .nav_menu li a:hover{
+          background: var(--color-bg2);
+          color: var(--color-white);
+      }
+
+ /* ==============================HEADER ======================== */
+
+      header{
+          height: 52vh;
+          margin-bottom: 4rem;
+
+      }
+      .header_container{
+          gap: 0;
+          padding-bottom: 3rem;
+      }
+
+       /* ==============================CATEGORIES ======================== */
+
+       .categories{
+           height: auto;
+       }
+
+       .categories_container{
+           grid-template-columns: 1fr ;
+           gap: 3rem;
+       }
+       .categories_left{
+           margin-right: 0;
+       }
+
+         /* ==============================POPULAR COURSES ======================== */
+
+    .courses{
+        margin-top: 3REM;
+        padding: 0;
+    }
+    .courses_container{
+        grid-template-columns: 1FR 1FR;
+    }
+   /* ============================== FAQS ======================== */
+   .faqs_container{
+       grid-template-columns: 1fr;
+   }
+   .faq{
+       padding: 1.5rem;
+   }
+    /* ============================== FOOTER ======================== */
+    .footer_container{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .footer_1{
+        display: none;
+    }
+    .footer_2{
+        margin-left: 2rem;
+    }
+
+  }
+
+
+   /* <!-- ====================== MEDIA QUERRIES PHONES ===================== --> */
+   @media  screen and (max-width:600px) {
+      .container{
+          width: var(--container-width-sm);
+      }
+/* NAVBAR */
+
+      .nav_menu{
+          right: 3%;
+          /* margin-right: 3%; */
+      }
+
+      header{
+          height: 100vh;
+          /* margin: 1%; */
+      }
+      .header_container{
+          /* display: flex; */
+          grid-template-columns: 1fr;
+          text-align: center;
+          margin-top: 0;
+      }
+      .header_left p{
+          margin-bottom: 1.5rem;
+      }
+
+/* <!-- ====================== CATEGORIES ===================== --> */
+.categories_right{
+    grid-template-columns: 1fr 1fr;
+    gap: 0.7rem;
+
+}
+.category{
+    padding: 1rem;
+    border-radius: 1rem;
+}
+.category_icon{
+    margin-top: 4px;
+    display: inline-block;
+}
+/* <!-- ====================== POPULAR COURSE ===================== --> */
+
+.courses_container{
+    grid-template-columns: 1fr;
+}
+
+/* <!-- ====================== TESTIMONIAL ===================== --> */
+.testimonial_body{
+    padding: 1.2rem;
+}
+
+/* <!-- ====================== FOOTER ===================== --> */
+.footer_container{
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 2rem;
+}
+
+.footer_1 p{
+    margin: 1rem auto;
+}
+.footer_socials{
+    justify-content: center;
+}
+  
+}
+
+/* Media Query for Large screens */
+@media (min-width: 1025px) {
+    #open-menu-btn{
+        display: none;
+    }
+    #close-menu-btn{
+        display: none;
+    }
+   
+}
