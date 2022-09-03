@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/forms.css">
+    <link rel="stylesheet" href="css/inputs.css">
     <link rel="stylesheet" href="css/about.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -252,63 +253,107 @@
 
 <!-- END OF ADMISSION GUIDES -->
 
-
 <section class="container application">
-    <div class="application-list">
-        <div class="application-input">
-            <form action="" class="form-input">
-                <input type="file">
-                
-               <label for="name">Your Name: </label> 
-                <input type="text" placeholder="your name" required>
+            <form action="insert.php" method="post" class="form-input">
+
+                <!-- application inputs -->
+                <h4>Student Details</h4> 
+                <div class="application-list">
+                    <!-- sectional inputs -->
+                    
+                    <div class="application-input">    
+                           
+                         <label for="fname"> First Name: </label> 
+                         <input name="name" type="text" placeholder="Your name">
+
+                        <label for="lname">Last Name: </label> 
+                        <input type="text" placeholder="Your name">
                
-                <label for="dob">Date of Birth: </label>
-                <input type="date" placeholder="Date of Birth" required>
+                        <label for="dob">Date of Birth: </label> <br>
+                        <input type="date" name="dob" placeholder="Date of Birth">
 
-                <label for="email">Email</label>
-                <input type="text" name="email" id="email">
+                        <label for="age"> Age </label> 
+                        <input type="number" name="age" placeholder="Your age">
 
-                <label for="gender">Gender</label>
-                <select name="gender" id="">
-                    <option value="Male">Male</option>
-                    <option value="female">Female</option>
-                </select>
-                <label for="nationality">Nationality</label>
-                <input type="text" name="nationality" required >
+                        <label for="email">Email</label>
+                        <input type="text" name="email" id="email" placeholder="Email Address">
 
-                <label for="Phone Number"></label>
-                <input type="number" name="number" id="number" required>
+                        <label for="">District</label>
+                        <input type="text" name="district" placeholder="District">
 
-                <label for="">Academic Program applying for.</label>
-                <select name="program" id="program">
-                    <option value="">Diploma in Radiography</option>
-                    <option value="">Diploma in Pharmacy</option>
-                    <option value="">Diploma in Health Service management</option>
-                    <option value="">Diploma in Clinical medicine</option>
-                    <option value="">Certificate in Midwifery</option>
-                    <option value="">Certificate in Pharmacy</option>
-                    <option value="">Certificate in Nursing</option>
-                    <option value="">Certificate in Medical Theatre Assistants</option>   
-                </select>      
-                
-                <label for="Sponsor">Sponsor Name</label>
-                <input type="text" name="Sponsor" id="sponsor">
+                    </div>
+                    <!-- sectional inputs -->
+                    <div class="application-input">    
+                      
+                        <label for="phone">Phone Number</label>
+                        <input type="number" name="student_phone" id="" placeholder="Phone number">
 
-                <label for="sponsor-phone">Sponsor Phone</label>
-                <input type="number" name="sponser_number" id="">
+                        <label for="gender">Gender</label>
+                        <input type="text" placeholder="Gender" name="gender" >
 
-                <label for="kin">Next of Kin Details</label>
-                <input type="submit" value="Submit">
+                        <label for="nationality">Nationality</label>
+                        <input type="text" name="nationality" placeholder="Nationality">
+        
+                        <label for="Phone Number">Grades</label>
+                        <input type="number" name="grades" id="number" >
+
+                        <label for="slip">Attach pass slip</label>
+                        <input type="file" name="slip" id="">
+
+                        <label for="photo">Passport Photo</label>
+                        <input type="file" name="passport_photo">
+        
+                        <label for="">Academic Program applying for.</label>
+                        <select name="program" id="program">
+                            <option value="">Diploma in Radiography</option>
+                            <option value="">Diploma in Pharmacy</option>
+                            <option value="">Diploma in Health Service management</option>
+                            <option value="">Diploma in Clinical medicine</option>
+                            <option value="">Certificate in Midwifery</option>
+                            <option value="">Certificate in Pharmacy</option>
+                            <option value="">Certificate in Nursing</option>
+                            <option value="">Certificate in Medical Theatre Assistants</option>   
+                        </select>      
+                   </div>
+
+                   <!-- sectional inputs -->
+                   <div class="application-input">
+                       <!-- <h4>Sponsors Details</h4> -->
+                       <label for="name">Sponsor Name: </label> 
+                        <input name="sponsor_name" type="text" placeholder="Sponsor name" >
+                        
+                         <label for="name">Sponsor Email: </label> 
+                         <input  name="sponsor_email" type="email" placeholder="Sponsor Email" >
+
+                        <label for="name">Sponsor number: </label> 
+                        <input  name="sponsor_number" type="number" placeholder="Sponsor number" >
+
+                        <label for="nationality">Sponsor Nationality</label>
+                        <input  name="sponsor_nationality" type="text" placeholder="Nationality">
+               
+                        <label for="parent">Parent/Guardian Name </label>
+                        <input  name="parent_name" type="text" placeholder="Parent Name" >
+
+                        <label for="email">Parent Phone</label>
+                        <input type="text" name="parent_phone" id="parent_phone" placeholder="Parent number">
+
+                   </div>
+
+                </div>
+                <input type="submit" class="btn btn-primary" name="submit" value="Submit">
             </form>
         </div>
-    </div>
+    </div>        
+</div>
+</div>
+</body>
+</html>
 
-
-
-
+            </form>
 </section>
 
 <!-- ====================== END OF ADMISSION ===================== -->
+
 
 
 
@@ -376,5 +421,6 @@
 
 
 <script src="main.js"></script>
+<script src="inputs.js"></script>
 </body>
 </html>

@@ -1,4 +1,19 @@
-input[type=text], select {
+
+
+
+.application{
+  margin-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+/* inputs editing */
+.application-list{
+  display: grid;
+  grid-template-columns: 30% 40% 30% ;
+  gap: 1rem;
+}
+
+input {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -9,7 +24,7 @@ input[type=text], select {
   }
   
   input[type=submit] {
-    width: 100%;
+    /* width: 100%; */
     background-color: #4CAF50;
     color: white;
     padding: 14px 20px;
@@ -28,3 +43,8 @@ input[type=text], select {
     background-color: #610000;
     padding: 20px;
   } */
+
+  select{
+    width: 100%;
+    
+  }
