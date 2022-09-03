@@ -14,8 +14,8 @@
         }
          
         // Taking all  values from the form data(input)
-        $first_name =  $_REQUEST['fname'];
-        $last_name = $_REQUEST['lname'];
+        $fname =  $_REQUEST['fname'];
+        $lname = $_REQUEST['lname'];
         $dob =  $_REQUEST['dob'];
         $age = $_REQUEST['age'];
         $address = $_REQUEST['address'];
@@ -37,36 +37,45 @@
          
         // Performing insert query execution
         // here our table name is college
-        $sql = "INSERT INTO j1  VALUES 
-        -- ('$first_name', '$last_name','$gender','$address','$email')";
-        ('$first_name',
-        '$last_name',
-        '$dob',
-        '$age',
-        '$address',
-        'email',
-        'district',
-        'phone_number',
-        'gender',
-        'nationality',
-        'grades',
-        'slip',
-        'photo',
-        'course',
-        'sponsor_name',
-        'sponsor_email',
-        'sponsor_number',
-        'sponsor_nationality',
-        'parent_name',
-        'parent_phone'       
-        )"
-         
+
+        // $sql = "INSERT INTO j1 (name)
+        // VALUES ('$name')";
+
+        $sql = "INSERT INTO admission (fname,lname,dob,age,address,email,district,phone_number,
+        gender,nationality,grades,slip,photo,course,sponsor_name,sponsor_email, sponsor_natioinality,
+        parent_name,parent_phone)
+        VALUES ('$fname','$lname','$dob', '$age','$address','$email','$address','$district',
+        '$phone_number','$gender',$nationality,'$grades','$slip','$photo','$course','$sponsor_name',
+        '$sponsor_email','$sponsor_number','$sponsor_nationality','$sponsor_name','$parent_name','$parent_phone')";
+
+        // $sql = "INSERT INTO admission  VALUES 
+        // ('$fname',
+        // '$lname',
+        // '$dob',
+        // '$age',
+        // '$address',
+        // 'email',
+        // 'district',
+        // 'phone_number',
+        // 'gender',
+        // 'nationality',
+        // 'grades',
+        // 'slip',
+        // 'photo',
+        // 'course',
+        // 'sponsor_name',
+        // 'sponsor_email',
+        // 'sponsor_number',
+        // 'sponsor_nationality',
+        // 'parent_name',
+        // 'parent_phone'       
+        // )";
+
         if(mysqli_query($conn, $sql)){
             echo "<h3>data stored in a database successfully."
-                . " Please browse your localhost php my admin"
-                . " to view the updated data</h3>";
+               ;
  
-            echo nl2br("\n$first_name\n $last_name\n "
+            echo nl2br("\n$fname\n $lname\n "
                 . "$gender\n $address\n $email");
         } else{
             echo "ERROR: Hush! Sorry $sql. "
