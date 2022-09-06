@@ -1,6 +1,5 @@
 
 <?php
- 
         // servername => localhost
         // username => root
         // password => empty
@@ -12,7 +11,8 @@
             die("ERROR: Could not connect. "
                 . mysqli_connect_error());
         }
-         
+if(isset($_POST['submit']))
+    {
         // Taking all  values from the form data(input)
         $fname =  $_REQUEST['fname'];
         $lname = $_REQUEST['lname'];
@@ -42,11 +42,11 @@
         // VALUES ('$name')";
 
         $sql = "INSERT INTO admission (fname,lname,dob,age,address,email,district,phone_number,
-        gender,nationality,grades,slip,photo,course,sponsor_name,sponsor_email, sponsor_natioinality,
+        gender,nationality,grades,slip,photo,course,sponsor_name,sponsor_email, sponsor_number, sponsor_nationality,
         parent_name,parent_phone)
-        VALUES ('$fname','$lname','$dob', '$age','$address','$email','$address','$district',
-        '$phone_number','$gender',$nationality,'$grades','$slip','$photo','$course','$sponsor_name',
-        '$sponsor_email','$sponsor_number','$sponsor_nationality','$sponsor_name','$parent_name','$parent_phone')";
+        VALUES ('$fname','$lname','$dob', '$age','$address','$email','district', '$phone_number','$gender','$nationality',
+        '$grades','$slip','$photo','$course','$sponsor_name', '$sponsor_email','$sponsor_number','$sponsor_nationality',
+        '$parent_name','$parent_phone')";
 
         // $sql = "INSERT INTO admission  VALUES 
         // ('$fname',
@@ -72,7 +72,7 @@
         // )";
 
         if(mysqli_query($conn, $sql)){
-            echo "<h3>data stored in a database successfully."
+            echo "<h3>Data stored in a database successfully."
                ;
  
             echo nl2br("\n$fname\n $lname\n "
@@ -81,7 +81,9 @@
             echo "ERROR: Hush! Sorry $sql. "
                 . mysqli_error($conn);
         }
-         
+        
+
+}  
         // Close connection
         mysqli_close($conn);
         ?>
