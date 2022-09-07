@@ -36,10 +36,7 @@
     </script>
 </head>
 <body>
-    <div class="wrapper admission-dashboard">
-        <div class="container-fluid ">
-            <div class="row">
-                <div class="col-md-">
+<div class="col-md-12">
                     <div class="mt-5 mb-3 clearfix">
                         <h2 class="pull-left">Student Admission Details</h2>
                         <a href="create.php" class="btn btn-success pull-right"><i class="fa fa-plus"></i> Add New Admission</a>
@@ -107,6 +104,10 @@
                     mysqli_close($conn);
                     ?>
                 </div>
+    <div class="wrapper admission-dashboard">
+        <div class="container-fluid ">
+            <div class="row">
+                
             </div>        
         </div>
     </div>

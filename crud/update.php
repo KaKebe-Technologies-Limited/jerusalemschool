@@ -41,14 +41,17 @@ if(isset($_POST["id"]) && !empty($_POST["id"])){
     // }
     
     // Check input errors before inserting in database
-    if(empty($name_err) && empty($address_err) && empty($salary_err)){
+    if(empty($fname_err) && empty($lname_err) && empty($dob_err) && ($age_err) && empty($address_err) && empty($district_err) && ($phone_err) && empty($gender_err) && empty($nationality_err) && empty($grades_err) && empty($course_err)){
         // Prepare an update statement
         $sql = "UPDATE admission SET fname=?, lname=?, dob=?, age=?, address=?, district=?, phone_number=?, gender=?, nationality=?,
         grades=?, course=? WHERE id=?";
          
         if($stmt = mysqli_prepare($conn, $sql)){
             // Bind variables to the prepared statement as parameters
-            mysqli_stmt_bind_param($stmt, "sssi", $param_fname,  $param_lname,$param_dob,  $param_age,
+            // mysqli_stmt_bind_param($stmt, "sssi", $param_fname  $param_lname $param_dob   $param_age $param_address
+            //   $param_district $param_phone_number $param_gender $param_nationality  $param_grades $param_course $param_id);
+
+            mysqli_stmt_bind_param($stmt, "ssssssssssssi", $param_fname,  $param_lname,$param_dob,  $param_age,
             $param_address,  $param_district, $param_phone_number, $param_gender, $param_nationality,  $param_grades,
             $param_course, $param_id);
             
@@ -57,8 +60,8 @@ if(isset($_POST["id"]) && !empty($_POST["id"])){
             $param_lname = $lname;
             $param_dob = $dob;
             $param_age = $age;
-            $param_address= $age;
-            $param_district;
+            $param_address= $address;
+            $param_district = $district;
             $param_phone_number = $phone_number;
             $param_gender = $gender;
             $param_nationality = $nationality;
@@ -174,21 +177,58 @@ if(isset($_POST["id"]) && !empty($_POST["id"])){
                             <span class="invalid-feedback"><?php echo $lname_err;?></span>
                         </div>
                         <div class="form-group">
-                            <label>First Name</label>
-                            <input type="text" name="fname" class="form-control <?php echo (!empty($fname_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $fname; ?>">
-                            <span class="invalid-feedback"><?php echo $fname_err;?></span>
+                            <label>Date of Birth </label>
+                            <input type="date" name="dob" class="form-control <?php echo (!empty($dob_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $dob; ?>">
+                            <span class="invalid-feedback"><?php echo $dob;?></span>
                         </div>
-                        
+                        <div class="form-group">
+                            <label>Age </label>
+                            <input type="number" name="age" class="form-control <?php echo (!empty($age_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $age; ?>">
+                            <span class="invalid-feedback"><?php echo $age;?></span>
+                        </div>
+
                         <div class="form-group">
                             <label>Address</label>
                             <textarea name="address" class="form-control <?php echo (!empty($address_err)) ? 'is-invalid' : ''; ?>"><?php echo $address; ?></textarea>
                             <span class="invalid-feedback"><?php echo $address_err;?></span>
                         </div>
+
                         <div class="form-group">
-                            <label>Salary</label>
-                            <input type="text" name="salary" class="form-control <?php echo (!empty($salary_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $salary; ?>">
-                            <span class="invalid-feedback"><?php echo $salary_err;?></span>
+                            <label>District </label>
+                            <input type="text" name="district" class="form-control <?php echo (!empty($district_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $district; ?>">
+                            <span class="invalid-feedback"><?php echo $district;?></span>
                         </div>
+
+                        <div class="form-group">
+                            <label>Phone Number</label>
+                            <input type="number" name="phone_number" class="form-control <?php echo (!empty($phone_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $phone; ?>">
+                            <span class="invalid-feedback"><?php echo $phone_err;?></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Gender </label>
+                            <input type="text" name="gender" class="form-control <?php echo (!empty($gender_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $gender; ?>">
+                            <span class="invalid-feedback"><?php echo $gender;?></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Nationality </label>
+                            <input type="text" name="nationality" class="form-control <?php echo (!empty($nationality_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $nationality; ?>">
+                            <span class="invalid-feedback"><?php echo $nationality;?></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Grades </label>
+                            <input type="number" name="grades" class="form-control <?php echo (!empty($grades_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $grades; ?>">
+                            <span class="invalid-feedback"><?php echo $grades;?></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Course </label>
+                            <input type="text" name="course" class="form-control <?php echo (!empty($course_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $course; ?>">
+                            <span class="invalid-feedback"><?php echo $course;?></span>
+                        </div>
+
                         <input type="hidden" name="id" value="<?php echo $id; ?>"/>
                         <input type="submit" class="btn btn-primary" value="Submit">
                         <a href="index.php" class="btn btn-secondary ml-2">Cancel</a>

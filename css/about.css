@@ -6,6 +6,17 @@
     background-position: center;
     
 }
+  /* Centered text */
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--color-bg2);
+    border-radius: 20px;
+    width: auto;
+    padding: 20px;
+  }
 .about_achievements-container{
     display: grid;
     grid-template-columns: 40% 60%;
@@ -79,6 +90,10 @@
 }
 
 .container-vision{
+        /* background-image: url("images/slider/bg1.jpg") !important;
+    height: 600px;
+    width: 100%;
+    background-repeat: no-repeat; */
     display: grid;
     grid-template-columns: repeat(3,1fr);
     gap: 1rem;
@@ -89,6 +104,10 @@
 }
 .vision-section{
     background: #fff;
+    /* background-image: url("images/slider/bg1.jpg") !important;
+    height: 600px;
+    width: 100%;
+    background-repeat: no-repeat; */
     
 }
 
@@ -170,6 +189,10 @@
 
 /* =================== MEDIA QUERRIES TABLETS  */
 
+.about_achievements-left img{
+    border-radius: 80px;
+    /* width: 600px; */
+}
 @media screen and (max-width: 1024px) {
     .about_achievements{
         margin-top: 2rem;
@@ -190,14 +213,23 @@
     .team_member{
         padding: 1rem;
     }
+    .about_achievements-left img{
+        border-radius: 10px;
+        width: 100%;
+    }
     
 }
 
    /* <!-- ====================== MEDIA QUERRIES PHONES ===================== --> */
    @media  screen and (max-width:600px) {
+
+        .centered{
+            display: none;
+        }
        .achievement_cards{
+           /* display: grid; */
            grid-template-columns: 1fr, 1fr ;
-           gap: 0.7rem;
+           gap: 0.2rem;
        }
        .team_member{
            padding: 0;
@@ -208,4 +240,13 @@
            margin-top: 2rem;
            margin-bottom: 2rem;
        }
+       .about_achievements-left img{
+        border-radius: 10px;
+        width: 100%;
+        margin-left: -10%;
+    }
+    .container-vision{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
    }

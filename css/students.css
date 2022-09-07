@@ -3,7 +3,13 @@
     max-width: 1000px;
     margin: auto;
   }
-  
+  /* Centered text */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
   h1 {
     font-size: 50px;
     word-break: break-all;
