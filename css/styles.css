@@ -9,6 +9,7 @@
 }
   /* Centered text */
   .centered {
+    display: none;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -539,27 +540,9 @@ header{
         animation: var(--animation);
 
     }
+ 
     
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
  /* <!-- ====================== END OF TESTIMONIALS ===================== --> */
  footer{
      background: var(--color-bg1);
