@@ -45,6 +45,9 @@
 
     --transition: all 400ms ease;
 }
+.white-text{
+    color: white;
+}
 .header_container{
     /* background-image: url("../images/bg.jpg");
     background-repeat: no-repeat;
@@ -569,6 +572,9 @@ header{
      grid-template-columns: repeat(4,1fr);
      gap: 5rem;
 
+ }
+ .footer h4{
+    color: white;
  }
  .footer_container >div h4{
      margin-bottom: 1.2rem;
