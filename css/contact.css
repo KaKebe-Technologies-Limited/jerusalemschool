@@ -1,5 +1,7 @@
+
+
 .contact_container{
-    background: var(--color-bg1);
+    background: var(--color-white);
     padding: 4rem;
     display: grid;
     grid-template-columns: 40% 60%;
@@ -58,6 +60,7 @@
     flex-direction: column;
     gap: 1.2rem;
     margin-right: 4rem;
+    /* background: var(w); */
 }
 .form_name{
     display: flex;

@@ -7,6 +7,16 @@
     list-style: none;
     box-sizing: border-box;
 }
+
+@media screen and (max-width:600px) {
+    
+    .homebg img{
+        height: 500px;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
   /* Centered text */
   .centered {
     display: none;
