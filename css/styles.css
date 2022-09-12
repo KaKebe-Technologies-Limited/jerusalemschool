@@ -22,6 +22,7 @@
     background-image: url('images/slider/bg3.jpg');
 } */
 :root{
+    --bg:#f2f4f6;
     --jcolor:#474184;
     --color-primary: #6c63ff;
     --color-success:#00bf83;
@@ -35,6 +36,8 @@
     /* --color-bg1: #2e3267; */
     --color-bg1: #2e3267;
     --color-bg2: #424890;
+    /* 484184 */
+    --logo-color:#484184;
 
     --container-width-lg: 80%;
     --container-with-md: 90%;
@@ -260,14 +263,24 @@ header{
 
 /* ==================   REMARKS PRINCIPLE ====================== */
 .welcome_remarks{
-    background: var(--color-bg2);
+    background: var(--bg);
     padding-top: 5%;
     padding-bottom: 5%;
+}
+.welcome_remarks p,h3,h4{
+    color: black;
+}
+
+.justify-align{
+    text-align: justify;
+}
+.welcome_remarks p{
+    text-align: justify;
 }
 .container-remarks{
     display: grid;
     grid-template-columns: 30% 70%;
-    gap: 2rem ;
+    gap: 5rem ;
 }
 .remarks_image img{
     /* height: 300px; */
@@ -277,7 +290,7 @@ header{
 .container_right{
     padding: 1rem;
     align-items: center;
-    text-align: ;
+    /* text-align: ; */
     /* text-align: center; */
 
 }
@@ -377,9 +390,12 @@ header{
 /* <!-- ====================== END OF COURSES ===================== --> */
  .faqs{
      padding-top: 7%;
-     background: var(--color-bg);
+     background: var(--bg);
      box-shadow: inset 0 0 3rem #000;
      padding-bottom: 4%;
+ }
+ .faqs h2{
+    color: black;
  }
  .faqs_container{
      display: grid;
@@ -692,8 +708,10 @@ footer ul li a:hover{
        }
 
        .categories_container{
+
+           
            grid-template-columns: 1fr ;
-           gap: 3rem;
+           gap: 4rem;
        }
        .categories_left{
            margin-right: 0;

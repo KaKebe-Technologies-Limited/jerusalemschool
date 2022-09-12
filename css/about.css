@@ -121,7 +121,8 @@
     color: black;
     align-items: center;
     text-align: center;
-    margin-bottom: 6rem;
+    margin-bottom: 0rem;
+    padding-bottom: 3rem;
 }
  hr{
     color: black;
