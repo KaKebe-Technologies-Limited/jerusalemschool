@@ -7,7 +7,11 @@
     list-style: none;
     box-sizing: border-box;
 }
-
+.student_portal{
+    background-color: greenyellow !important;
+    color: red !important;
+    
+}
 @media screen and (max-width:600px) {
     
     .homebg img{
@@ -19,7 +23,7 @@
 
   /* Centered text */
   .centered {
-    display: none;
+    /* display: block; */
     position: absolute;
     top: 50%;
     left: 50%;
@@ -348,7 +352,7 @@ header{
 
 @media screen and (max-width: 600px){
     .centered{
-        display: none;
+        display: block;
     }
     /* .nav_container{
         background: transparent;
